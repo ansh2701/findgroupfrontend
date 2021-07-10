@@ -1,0 +1,152 @@
+.container {
+  background: url("/fadebg.svg") repeat-y;
+  background-size: 100% auto;
+  min-height: 90vh;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnContainer {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: rgb(31, 48, 54);
+}
+
+.btnContainer h1 {
+  margin-right: 20px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.btn:hover,
+.btn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.btnTele {
+  composes: btn;
+  border-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  transition: all 150ms ease-in-out;
+}
+.btnTele:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
+.btnWhatsapp {
+  composes: btn;
+  border-color: #075e54;
+
+  color: #fff;
+  box-shadow: 0 0 40px 40px #075e54 inset, 0 0 0 0 #075e54;
+  transition: all 150ms ease-in-out;
+}
+
+.btnWhatsapp:hover {
+  box-shadow: 0 0 10px 0 #075e54 inset, 0 0 10px 4px #075e54;
+}
+
+.btnAll {
+  composes: btn;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #e74c3c inset, 0 0 0 0 #e74c3c;
+  transition: all 150ms ease-in-out;
+}
+
+.btnAll:hover {
+  box-shadow: 0 0 10px 0 #e74c3c inset, 0 0 10px 4px #e74c3c;
+}
+
+.searchBox {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.inputSearch {
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  background-color: #22a6b3;
+  padding-right: 40px;
+  color: #fff;
+}
+.inputSearch::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btnSearch {
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: #ffffff;
+  background-color: transparent;
+  pointer-events: painted;
+}
+.btnSearch:focus ~ .inputSearch {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.inputSearch:focus {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    background-size: auto;
+  }
+
+  .btn {
+    margin: 2px;
+    font-weight: 200;
+    padding: 0.6em 1.4em;
+  }
+}
