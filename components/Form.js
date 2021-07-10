@@ -51,7 +51,6 @@ const Form = ({ categories, types }) => {
         progress: undefined,
       });
     }
-    console.log(JSON.stringify(values));
     const res = await fetch(getStrapiURL("/links"), {
       method: "POST",
       headers: {
