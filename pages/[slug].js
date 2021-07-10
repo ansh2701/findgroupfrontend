@@ -39,7 +39,7 @@ const Links = ({ category }) => {
   };
 
   return (
-    <Layout seo={category.seo} keywords={category.keywords} url={slug}>
+    <Layout seo={category.seo} keywords={category.keywords} url={`/${slug}`}>
       <div className={styles.container}>
         <div className={styles.btnContainer}>
           <button className={styles.btnTele} onClick={() => handleSubmit(3)}>

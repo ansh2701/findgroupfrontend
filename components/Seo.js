@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 const Seo = ({ seo, keywords, url }) => {
+  const frontUrl = `${process.env.NEXT_PUBLIC_FRONTEND_URL}/${url}`;
   const { metaTitle: title, metaDescription: description, shareImage } = seo;
   const Image = shareImage.media.url;
   return (
@@ -13,7 +14,7 @@ const Seo = ({ seo, keywords, url }) => {
         content="summary_large_image"
         key="twitter:card"
       />
-      <meta property="og:url" content={url} key="og:url" />
+      <meta property="og:url" content={frontUrl} key="og:url" />
       <meta property="og:title" content={title} key="og:title" />
       <meta
         property="og:description"
@@ -21,7 +22,7 @@ const Seo = ({ seo, keywords, url }) => {
         key="og:description"
       />
       <meta property="og:image" content={Image} key="og:image" />
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={frontUrl} />
     </Head>
   );
 };

@@ -11,7 +11,9 @@ const Layout = ({ children, seo, keywords, url }) => {
       <Header />
       {children}
       <footer>
-        <p>© 2021 . All Rights Resereved. </p>
+        <p>
+          © 2021 {process.env.NEXT_PUBLIC_FRONTEND_URL}. All Rights Resereved.{" "}
+        </p>
         <p>This website is not affiliated with WhatsApp or Telegram.</p>
       </footer>
     </>
